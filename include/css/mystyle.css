@@ -1,0 +1,271 @@
+/*FOOTER*/
+
+footer {
+  background: #28a745;
+  background: #28a745;
+  background: #28a745;
+  color: white;
+  margin-top:100px; 
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+}
+
+
+/*SOCİAL İCONS*/
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+/* footer social icons */
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
+
+
+/* SCROLLBAR CHANGE */
+/* Lebar Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Warna jalur scrollbar */
+::-webkit-scrollbar-track {
+  background: #ffc107; 
+}
+ 
+/* Arah scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #28a745; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+
+
+
+
+
+
+
+
+
+/* ADDITIONAL CSS */
+.image-parent {
+  max-width: 40px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+.products-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products-list > .item {
+  border-radius: 0.25rem;
+  background: #ffffff;
+  padding: 10px 0;
+}
+
+.products-list > .item::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.products-list .product-img {
+  float: left;
+}
+
+.products-list .product-img img {
+  height: 50px;
+  width: 50px;
+}
+
+.products-list .product-info {
+  margin-left: 60px;
+}
+
+.products-list .product-title {
+  font-weight: 600;
+  color: #28a745;
+}
+
+.products-list .product-description {
+  color: #6c757d;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.products-list .product-blog {
+  color: #6c757d;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*white-space: nowrap;*/
+}
+
+.product-list-in-card > .item {
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.product-list-in-card > .item:last-of-type {
+  border-bottom-width: 0;
+}
+
+
+
+/* 404 NOT FOUND PAGE */
+.page-error {
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  text-align: center;
+  display: table; 
+}
+
+.page-error .page-inner {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle; 
+}
+
+.page-error h1 {
+  font-size: 10em;
+  font-weight: 700; 
+}
+
+.page-error .page-description {
+  font-size: 18px;
+  font-weight: 400;
+  color: #34395e; 
+}
+
+.page-error .page-search {
+  margin: 40px auto;
+  max-width: 100%;
+  width: 350px; 
+}
+
+.page-error .page-search .form-control {
+  border-radius: 30px; 
+}
+
+.page-error .page-search .btn {
+  border-radius: 30px;
+  margin-left: 10px; 
+}
+
+@media (max-width: 575.98px) {
+  .page-error .page-search {
+    width: 100%; 
+  } 
+}
+
+
+
+/* CUSTOM DATATABLES */
+.page-item.active .page-link{
+  background-color: #28a745;
+  border-color: #28a745;
+}
