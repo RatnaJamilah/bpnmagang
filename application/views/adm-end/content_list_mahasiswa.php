@@ -66,7 +66,6 @@
                           <?php } ?>
                         </td>
                         <td class="text-center" nowrap="nowrap">
-                          <div class="btn-group-vertical">
                             <?php if($data->active == 'aktif'){ ?>
                             <a href="<?= site_url('adm-end/mahasiswa/nonaktif_mahasiswa/'.$data->id) ?>" class="btn btn-warning btn-sm text-white nonaktifmhs"><i class="fas fa-times"></i> NONAKTIFKAN</a>
                             <?php }else if($data->active == 'nonaktif'){ ?>
@@ -74,9 +73,9 @@
                             <?php } ?>
 
                             <a class="btn btn-sm btn-info" href="#modal-resetpass<?php echo $data->id ?>" data-toggle="modal">
-                              <i class="fas fa-key"></i> Ganti Password
+                              <i class="fas fa-key"></i>
                             </a>
-                            <a href="<?= site_url('adm-end/mahasiswa/hapus_mahasiswa/'.$data->id)?>" class="btn btn-danger btn-sm hapus"><i class="fas fa-trash"></i> Hapus</a>
+                            <a href="<?= site_url('adm-end/mahasiswa/hapus_mahasiswa/'.$data->id)?>" class="btn btn-danger btn-sm hapus"><i class="fas fa-trash"></i></a>
                           </div>
                         </td>
                       </tr>

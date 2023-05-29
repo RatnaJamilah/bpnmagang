@@ -35,6 +35,7 @@ class Pengajuan extends CI_Controller {
 		$semester = $this->input->post('semester');
 		$mulai_periode = $this->input->post('mulai_periode');
 		$akhir_periode = $this->input->post('akhir_periode');
+		$no_hp = $this->input->post('no_hp');
 		$alamat = $this->input->post('alamat');
 		$foto_surat = $_FILES['userfile']['name'];
 
@@ -62,6 +63,10 @@ class Pengajuan extends CI_Controller {
 		$this->form_validation->set_rules('akhir_periode', 'Akhir Periode', 'trim|required',
 			array(
 				'required' => 'Tentukan akhir periode magang / PKL'
+			));
+			$this->form_validation->set_rules('no_hp', 'no_hp', 'trim|required',
+			array(
+				'required' => 'No. HP belum diisi'
 			));
 		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required',
 			array(
@@ -103,6 +108,7 @@ class Pengajuan extends CI_Controller {
 					'semester' 	    => $semester,
 					'mulai_periode' => $mulai_periode,
 					'akhir_periode' => $akhir_periode,
+					'no_hp' 		=> $no_hp,
 					'alamat' 		=> $alamat,
 					'status' 		=> 'pending',
 					'foto_surat' 	=> $foto_surat,

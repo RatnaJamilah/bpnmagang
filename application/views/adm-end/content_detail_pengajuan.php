@@ -18,7 +18,7 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <button type="button" onclick="window.history.go(-1)" class="btn btn-flat btn-info btn-sm"><i class="fas fa-arrow-left"></i> Kembali</button>
+            <button type="button" onclick="window.history.go(-1)" class="btn btn-square btn-info btn-sm"><i class="fas fa-arrow-left"></i> Kembali</button>
             </div>
           </div>
       </div>
@@ -94,6 +94,12 @@
                     <th width="30%">Username</th>
                     <td width="1%">:</td>
                     <td><?php echo $data->username ?></td>
+                  </tr>
+
+                  <tr>
+                    <th width="30%">No. HP</th>
+                    <td width="1%">:</td>
+                    <td><?php echo $data->no_hp ?></td>
                   </tr>
 
                   <tr>

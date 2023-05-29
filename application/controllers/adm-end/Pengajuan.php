@@ -64,15 +64,9 @@ class Pengajuan extends CI_Controller {
 	}
 
 	public function hapus_pengajuan($id_pengajuan){
-		$id_pengajuan = decode_url($id_pengajuan);
-		// $get_user = $this->db->get('akun');
-		// foreach ($get_user->result_array() as $one_user) {
-		// 	$id = $one_user['id'];
-		// }
-		$this->db->delete('pengajuan',array('id_pengajuan' => $id_pengajuan));
-		// $this->db->delete('akun',array('id' => $id));
-		// $this->db->query("DELETE FROM mahasiswa WHERE id_mahasiswa=$id_mahasiswa'");
-		$this->session->set_flashdata('info', '<script>swal({title: "Info", text: "Pengajuan Mahasiswa Berhasil Dihapus", timer: 10000, icon: "success", button: false});</script>');
+		$this->db->query("DELETE FROM pengajuan WHERE id=$id_pengajuan");
+		// $this->message('BERHASIL','Pengajuan Cuti'.' '.strtoupper($nama_karyawan).' '.'Berhasil DISETUJUI !','success');
+		$this->session->set_flashdata('info', '<script>swal({title: "Info", text: "data Pengajuan berhasil dihapus", timer: 10000, icon: "success", button: false});</script>');
 		redirect('adm-end/pengajuan');
 	}
 

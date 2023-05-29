@@ -26,17 +26,6 @@ class Absensi extends CI_Controller {
 		$this->load->view('adm-end/template/content_footer');
 		$this->load->view('adm-end/template/content_sidebar-control');
 	}
-
-	public function tambah()
-	{
-		$this->load->view('adm-end/absensi');
-	}
-
-	public function simpan()
-	{
-		$this->administrator_model->simpandata();
-		redirect('adm-end/absensi');
-	}
 }
 
 /* End of file Operator.php */

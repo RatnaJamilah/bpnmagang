@@ -30,17 +30,19 @@ class Administrator_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	}
-
-	public function simpandata()
-	{
-		$data = [
-			"nim" => $this->input->post ('nim',true),
-			"nama_lengkap" => $this->input->post ('nama_lengkap',true),
-			"jurusan" => $this->input->post ('jurusan',true),
-			"tanggal" => $this->input->post ('tanggal',true)
-		];
-		$this->db->insert ('absensi', $data);
+ 
+	function input_data($table,$data){
+		$this->db->insert($table,$data);
 	}
+
+	function edit_data($where,$table){		
+		return $this->db->get_where($table,$where);
+	}
+
+	function update_data($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update('absensi',$data);
+	}	
 
 }
 

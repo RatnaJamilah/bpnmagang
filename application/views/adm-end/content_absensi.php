@@ -29,10 +29,10 @@
           <div class="col-md-12">
             <div class="card card-outline">
               <div class="card-header bg-info">
-                <h5 class="card-title mt-2 m-0"><i class="fas fa-user"></i> List Absensi</h5>
+                <h5 class="card-title mt-1 m-0"><i class="fas fa-user"></i> List Absensi</h5>
                 <div class="card-tools">
-                  <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-default">
-                    <i class="fa fa-plus"></i> Absen
+                  <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-default">
+                    <i class="fa fa-plus"></i>
                   </button>
                 </div>
               </div>
@@ -62,8 +62,67 @@
                         <td><?php echo $data->nama_lengkap ?></td>
                         <td><?php echo $data->universitas ?></td>
                         <td><?php echo $data->jurusan ?></td>
-                        <td class="text-center"><?= date('d/m/Y', strtotime($d->waktu)); ?></td>
-						<td class="text-center"><?= date('H:i', strtotime($d->waktu)); ?></td>   
+                        <td><?php echo date('d/M/y') ?></td>
+                        <td><?php echo $data->keterangan ?>
+                        </td>
+                        <td style="width:10%;">
+                        <a href="#" class="btn btn-info btn-sm" data-toggle="modal" data-target="#edit<?php echo $data->id; ?>">
+                           <i class="fa fa-edit"></i>
+                        </a>
+                            <div class="modal fade" id="edit<?php echo $data->id ?>">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header bg-info">
+                                  <h4 class="modal-title">Edit Absensi</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <form action="<?= site_url('absensi/update') ?>" method="POST">
+                                  <div class="modal-body">
+                                  <div class="form-group">
+                                      <label for="">Nim</label>
+                                      <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukan Nim" value="<?= set_value('nim')  ?>">
+                                      <input type="hidden" name="role" value="Admin">
+                                    </div>
+                                <div class="form-group">
+                                  <label for="">Nama Lengkap</label>
+                                  <input type="text" class="form-control" id="name" name="nama_lengkap" placeholder="Masukan Nama" value="<?= set_value('nama_lengkap')  ?>">
+                                  <input type="hidden" name="role" value="Admin">
+                                </div>
+                                <div class="form-group">
+                                  <label for="">Universitas</label>
+                                  <input type="text" class="form-control" id="universitas" name="universitas" placeholder="Masukan Universitas" value="<?= set_value('universitas')  ?>">
+                                  <input type="hidden" name="role" value="Admin">
+                                </div>
+                                <div class="form-group">
+                                  <label for="">Jurusan</label>
+                                  <input type="text" class="form-control" id="jurusan" name="jurusan" placeholder="Masukan Jurusan" value="<?= set_value('jurusan')  ?>">
+                                  <input type="hidden" name="role" value="Admin">
+                                </div>
+                                <div class="form-group">
+                                  <label for="">Tanggal</label>
+                                  <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="" value="<?= set_value('tanggal') ?>">
+                                </div>
+                                <div class="form-group">
+                                  <label for="">Keterangan</label>
+                                <select class="form-control select2" required="required"  name="keterangan">
+                                                  <option value='Hadir'>Hadir</option>
+                                                  <option value='Izin'>Izin</option>
+                                                  <option value='Sakit'>Sakit</option>
+                                                  <option value='Tanpa Keterangan'>Tanpa Keterangan</option>
+                                              </select>
+                                </div>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times"></i> Tutup</button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                        <a href="<?= base_url('absensi/hapus_absensi/'.$data->id )?>" class="btn btn-danger btn-sm hapusop"><i class="fas fa-trash"></i> </a>
+                          </td>
                       </tr>
                     <?php } ?>
                     </tbody>
@@ -79,8 +138,9 @@
   </div>
   <!-- /.content-wrapper -->
 
+  <!-- Tambah -->
   <div class="modal fade" id="modal-default">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header bg-info">
           <h4 class="modal-title">Tambah Absensi</h4>
@@ -116,17 +176,32 @@
 
             <div class="form-group">
               <label for="">Tanggal</label>
-              <input type="date" class="form-control" id="tanggal" name="cpassword" placeholder="" value="<?= set_value('tanggal') ?>">
+              <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="" value="<?= set_value('tanggal') ?>">
             </div>
-          </div>
-          <div class="modal-footer justify-content-between">
+
+            <div class="form-group">
+              <label for="">Keterangan</label>
+            <select class="form-control select2" required="required"  name="keterangan">
+                              <option value='Hadir'>Hadir</option>
+		                          <option value='Izin'>Izin</option>
+	                    	      <option value='Sakit'>Sakit</option>
+		                          <option value='Tanpa Keterangan'>Tanpa Keterangan</option>
+	                         </select>
+            </div>
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times"></i> Tutup</button>
             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
           </div>
         </form>
       </div>
     </div>
-  </div>
+    <!--End Tambah -->
+    
+     <!--End Edit -->
+  <?php foreach ($absensi as $data) { ?>
+  
+  <?php } ?>
+    <!--End Edit -->
+
 
   <!-- Sweetalert notification -->
   <script src="<?= base_url('include/assets/plugins/jquery/jquery.min.js') ?>"></script>

@@ -29,10 +29,10 @@
           <div class="col-md-12">
             <div class="card card-outline">
               <div class="card-header bg-info">
-                <h5 class="card-title mt-2 m-0"><i class="fas fa-user"></i> List Operator</h5>
+                <h5 class="card-title mt-1 m-0"><i class="fas fa-user"> </i> Administrator</h5>
                 <div class="card-tools">
-                  <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-default">
-                    <i class="fa fa-plus"></i> Operator
+                  <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modal-default">
+                    <i class="fa fa-plus"></i> 
                   </button>
                 </div>
               </div>
@@ -67,7 +67,6 @@
                           <?php } ?>
                         </td>
                         <td nowrap="nowrap">
-                          <div class="btn-group-vertical">
                             <?php if($data->nama_lengkap == 'Administrator'){ ?>
                             <a href="#" class="btn btn-secondary btn-sm disabled"><i class="fas fa-ban"></i> NO ACTION</a>
                             <?php }else{ ?>
@@ -77,9 +76,9 @@
                                 <a href="<?= site_url('adm-end/administrator/aktifkan_administrator/'.$data->id) ?>" class="btn btn-success btn-sm"><i class="fas fa-check"></i> AKTIFKAN</a>
                               <?php } ?>
                               <a class="btn btn-sm btn-info" href="#modal-resetpassadm<?php echo $data->id ?>" data-toggle="modal">
-                                  <i class="fas fa-key"></i> Ganti Password
+                                  <i class="fas fa-key"></i>
                               </a>
-                              <a href="<?= base_url('adm-end/administrator/hapus_administrator/'.$data->id )?>" class="btn btn-danger btn-sm hapusop"><i class="fas fa-trash"></i> Hapus</a>
+                              <a href="<?= base_url('adm-end/administrator/hapus_administrator/'.$data->id )?>" class="btn btn-danger btn-sm hapusop"><i class="fas fa-trash"></i> </a>
                             <?php } ?>
                           </div>
                         </td>
@@ -99,7 +98,7 @@
   <!-- /.content-wrapper -->
 
   <div class="modal fade" id="modal-default">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header bg-info">
           <h4 class="modal-title">Tambah Operator</h4>

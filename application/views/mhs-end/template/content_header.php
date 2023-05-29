@@ -2,8 +2,8 @@
   <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
       <a href="<?= site_url('dashboard') ?>" class="navbar-brand ml-2">
-        <img src="<?= base_url('include/img/fiqs-logo.png'); ?>" alt="AdminLTE Logo" class="brand-image">
-        <span class="brand-text font-weight-light"><strong>iqs | Internship</strong></span>
+        <img src="<?= base_url('include/img/bpn.png'); ?>" alt="AdminLTE Logo" class="brand-image">
+        <span class="brand-text font-weight-light"><strong>BPN | Magang</strong></span>
       </a>
 
       <div class="collapse navbar-collapse order-3" id="navbarCollapse">

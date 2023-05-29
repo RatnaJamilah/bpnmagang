@@ -62,7 +62,8 @@
                           <?php } ?>
                         </td>
                         <td nowrap="nowrap">
-                          <a href="<?php echo site_url('adm-end/pengajuan/detail_pengajuan/'.encode_url($data->id_pengajuan)) ?>" class="btn btn-info btn-sm"><i class="fas fa-search"></i> Detail</a>
+                          <a href="<?php echo site_url('adm-end/pengajuan/detail_pengajuan/'.encode_url($data->id_pengajuan)) ?>" class="btn btn-info btn-sm"><i class="fas fa-search"></i> </a>
+                          <a href="<?= base_url('adm-end/pengajuan/hapus_pengajuan/'.$data->id )?>" class="btn btn-danger btn-sm hapusop"><i class="fas fa-trash"></i> </a>
                         </td>
                       </tr>
                     <?php } ?>

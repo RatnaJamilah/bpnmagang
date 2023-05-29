@@ -72,6 +72,16 @@
                   </div>
 
                   <div class="form-group">
+                                <label>No. HP</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">+62</span>
+                                    </div>
+                                    <input type="text" name="no_hp" class="form-control" placeholder="No. HP">
+                                </div>
+                            </div>
+
+                  <div class="form-group">
                     <label>Alamat</label>
                     <textarea class="form-control" name="alamat" placeholder="e.g. Condet"></textarea>
                     <span class="text-red"><?php echo form_error('alamat') ?></span>

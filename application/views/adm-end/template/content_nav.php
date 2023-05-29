@@ -84,7 +84,7 @@
         </li>
 
 
-        <li class="nav-header text-white">MENU BACKUP</li>
+        <!--<li class="nav-header text-white">MENU BACKUP</li>
         <li class="nav-item">
           <a href="<?= site_url('adm-end/backup') ?>" class="nav-link text-white <?php if(isset($active_cuti)){echo $active_cuti; } ?>">
             <i class="nav-icon fas fa-database"></i>
@@ -95,7 +95,7 @@
 
             </span>
           </a>
-        </li>
+        </li>-->
 
         <li class="nav-header text-white">KELUAR</li>
         <li class="nav-item">

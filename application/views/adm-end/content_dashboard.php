@@ -24,8 +24,8 @@
     <div class="content animated fadeInUp faster">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6 col-xs-6">
-            <div class="small-box bg-info">
+          <div class="col-lg-4 col-xs-3">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h3 style="margin-left:10px;">
                   <?php
@@ -38,16 +38,17 @@
                 <p style="margin-left:10px; font-weight:600;">TOTAL MAHASISWA</p>
               </div>
               <div class="icon">
+              <i class="ion ion-users"></i>
                 <i class="fas fa-users text-white"></i>
               </div>
-              <a href="<?= base_url('adm-end/mahasiswa') ?>" class="small-box-footer" style="background: none;">
+              <a href="<?= base_url('adm-end/mahasiswa') ?>" class="small-box-footer">
                 Selengkapnya <i class="fa fa-arrow-circle-right"></i>
               </a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-xs-6">
-            <div class="small-box bg-info">
+          <div class="col-lg-4 col-xs-3">
+            <div class="small-box bg-success">
               <div class="inner">
                 <h3 style="margin-left:10px;">
                   <?php
@@ -63,13 +64,13 @@
               <div class="icon">
                 <i class="fas fa-user text-white"></i>
               </div>
-              <a href="<?= base_url('adm-end/administrator') ?>" class="small-box-footer" style="background: none;">
+              <a href="<?= base_url('adm-end/administrator') ?>" class="small-box-footer">
                 Selengkapnya <i class="fa fa-arrow-circle-right"></i>
               </a>
             </div>
           </div>
 
-          <div class="col-lg-12 col-xs-6">
+          <div class="col-lg-4 col-xs-3">
             <div class="small-box bg-info">
               <div class="inner">
                 <h3 style="margin-left:10px;">
@@ -85,7 +86,7 @@
               <div class="icon">
                 <i class="fas fa-edit text-white"></i>
               </div>
-              <a href="<?= base_url('adm-end/pengajuan') ?>" class="small-box-footer" style="background: none;">
+              <a href="<?= base_url('adm-end/pengajuan') ?>" class="small-box-footer">
                 Selengkapnya <i class="fa fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -130,7 +131,7 @@
                 </div>
               </div>
             </div>
-            <a href="<?php echo site_url('adm-end/backup/backup_database') ?>" target="_self" class="btn btn-success btn-block mb-3"><i class="fa fa-download"></i> Backup Database</a>
+            <!--<a href="<?php echo site_url('adm-end/backup/backup_database') ?>" target="_self" class="btn btn-success btn-block mb-3"><i class="fa fa-download"></i> Backup Database</a>-->
           </div>
         </div>
       </div><!-- /.container-fluid -->
